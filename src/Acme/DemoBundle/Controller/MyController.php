@@ -9,11 +9,12 @@
 
 namespace Acme\DemoBundle\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 
-class MyController {
-
+class MyController extends Controller
+{
     public function firstAction($name)
     {
         /*
@@ -24,4 +25,13 @@ class MyController {
         return new Response("Hello, ".$name);#$this->render('AcmeDemoBundle:Welcome:index.html.twig');
     }
 
+    public function secondAction()
+    {
+        /*
+         * The action's view can be rendered using render() method
+         * or @Template annotation as demonstrated in DemoController.
+         *
+         */
+        return $this->render('AcmeDemoBundle:SimpleTemplate:simple.html.twig');
+    }
 }
