@@ -1,0 +1,11 @@
+simple_response:
+    pattern: /1/{name}
+    defaults: { _controller: AcmeDemoBundle:My:first, name: "noob :)" }
+
+simple_template:
+    pattern: /2
+    defaults: { _controller: AcmeDemoBundle:My:second }
+
+extending_response:
+    pattern: /3
+    defaults: { _controller: AcmeDemoBundle:My:third }
