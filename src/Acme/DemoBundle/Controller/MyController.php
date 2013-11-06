@@ -34,4 +34,14 @@ class MyController extends Controller
          */
         return $this->render('AcmeDemoBundle:SimpleTemplate:simple.html.twig');
     }
+
+    public function thirdAction()
+    {
+        /*
+         * The action's view can be rendered using render() method
+         * or @Template annotation as demonstrated in DemoController.
+         *
+         */
+        return $this->render('AcmeDemoBundle:ExtendingTemplate:extending.html.twig');
+    }
 }
